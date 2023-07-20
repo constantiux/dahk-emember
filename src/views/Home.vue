@@ -10,6 +10,9 @@
     <p class="lead">
       You are now logged in.
     </p>
+    <div class="member-qr">
+      <qrcode-vue class="memberqr" :value="qrvalue" :size="qrsize" level="H" />
+    </div>
   </div>
 </template>
 
@@ -17,12 +20,14 @@
 import Hero from "../components/Hero.vue";
 import HomeContent from "../components/HomeContent.vue";
 import { useAuth0 } from '@auth0/auth0-vue';
+import QrcodeVue from 'qrcode.vue'
 
 export default {
   name: "home-view",
   components: {
     Hero,
     HomeContent,
+    QrcodeVue,
   },
   setup() {
     const auth0 = useAuth0();
@@ -31,6 +36,8 @@ export default {
       isAuthenticated: auth0.isAuthenticated,
       isLoading: auth0.isLoading,
       user: auth0.user,
+      qrvalue: auth0.user.sub,
+      qrsize: 200,
     }
   }
 };
@@ -39,5 +46,8 @@ export default {
 <style lang="css" scoped>
 .next-steps .fa-link {
     margin-right: 5px;
+}
+.member-qr {
+    padding: 0 0 20% 0;
 }
 </style>
