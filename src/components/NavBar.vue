@@ -124,4 +124,23 @@ export default {
   min-height: 125px;
   justify-content: space-between;
 }
+
+.btn-primary {
+  color: #fff;
+  background-color: #86BC24;
+  border-color: #86BC24;
+} 
+
+.btn-primary:hover, .btn-primary:active {
+  color: #fff;
+  background-color: #689e06;
+  border-color: #689e06;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: #689e06;
+  border-color: #689e06;
+  box-shadow: 0 0 0 0.2rem rgb(134 188 36 / 50%);
+}
 </style>

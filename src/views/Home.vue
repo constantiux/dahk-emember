@@ -11,7 +11,7 @@
       You are now logged in.
     </p>
     <div class="member-qr">
-      <qrcode-vue class="memberqr" :value="qrvalue" :size="qrsize" level="H" />
+      <qrcode-vue :value="user.sub" :size="qrsize" level="H" />
     </div>
   </div>
 </template>
@@ -31,15 +31,14 @@ export default {
   },
   setup() {
     const auth0 = useAuth0();
-    
     return {
       isAuthenticated: auth0.isAuthenticated,
       isLoading: auth0.isLoading,
       user: auth0.user,
-      qrvalue: auth0.user.sub,
       qrsize: 200,
     }
-  }
+  },
+  
 };
 </script>
 
