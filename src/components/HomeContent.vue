@@ -1,6 +1,6 @@
 <template>
   <div class="next-steps">
-    <h2 class="my-5 text-center">How does DAHK help with CIAM?</h2>
+    <h2 class="my-5 text-center">How do we help with CIAM?</h2>
 
     <div class="row">
       <div class="col-md-5 mb-4">

@@ -5,7 +5,7 @@
     <home-content />
   </div>
   <div v-if="isAuthenticated" class="text-center hero">
-    <img class="mb-3 app-logo" src="/dahk-logo.png" alt="Vue.js logo" width="120" />
+    <img class="mb-3 app-logo" src="/app-logo.png" alt="Vue.js logo" width="120" />
     <h1 class="mb-4">Hello, {{ user.name }}</h1>
     <p class="lead">
       You are now logged in.
